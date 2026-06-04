@@ -1,231 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>A propos de Meshoulam TINDA</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Meshoulam Tinda</title>
+  <meta name="description" content="À propos de Meshoulam Tinda: étudiant en sciences informatiques à l’Université Protestante au Congo, développeur web en formation et créateur de solutions numériques simples.">
+  <meta property="og:title" content="À propos - Meshoulam Tinda">
+  <meta property="og:description" content="Profil, compétences et approche de travail de Meshoulam Tinda.">
+  <meta property="og:type" content="website">
 
-  <!-- Favicons -->
   <link href="assets/img/mont.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="about-page">
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Meshoulam</h1>
+  <header id="header" class="header sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center" aria-label="Accueil Meshoulam Tinda">
+        <span class="logo-mark">MT</span>
+        <span><strong>Meshoulam Tinda</strong><small>Développeur web</small></span>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="about.html">A propos</a></li>
-          <li><a href="resume.html">CV</a></li>
+      <nav id="navmenu" class="navmenu" aria-label="Navigation principale">
+        <ul id="navmenu-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html" class="active" aria-current="page">À propos</a></li>
+          <li><a href="resume.html">Parcours</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          </li>
+          <li><a href="portfolio.html">Projets</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <button class="mobile-nav-toggle d-xl-none" type="button" aria-label="Ouvrir le menu" aria-controls="navmenu-list" aria-expanded="false">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
       </nav>
 
-      <div class="header-social-links">
-        <a href="https://x.com/meshoullamadnit?t=sNea3vagKjP_wBc1KUH82A&s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/meshoullam.tinda.3" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/mt_tynda?igsh=M2ozdTZqanhoaXkz" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/mt-tynda-39b781343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-social-links" aria-label="Réseaux sociaux">
+        <a href="https://x.com/meshoullamadnit?t=sNea3vagKjP_wBc1KUH82A&s=09" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil X"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/meshoullam.tinda.3" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/mt_tynda?igsh=M2ozdTZqanhoaXkz" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/mt-tynda-39b781343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
-
     </div>
   </header>
 
-  <main class="main">
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">À propos</span>
+        <h1>Un développeur en formation, avec une approche professionnelle.</h1>
+        <p>Je construis mon parcours autour du développement web, de la donnée et de l’accompagnement numérique. Cette page présente uniquement des informations cohérentes avec mon profil actuel.</p>
+      </div>
+    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>A propos</h2>
-        <p>Etudiant en science informatique passionné par le développement zeb et la création des solutions numériques modernes.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profil.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>informations personnelles</h2>
-            <p class="fst-italic py-3">
-              Pour en savoir plus sur moi.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Noms :</strong> <span>TINDA MAKELE Meshoulam</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Date de naissance :</strong> <span>03/05/2006</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>N° Téléphone      :</strong> <span>+243 83 79 03 056</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Ville             :</strong> <span>Kinshasa/RD Congo</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age       :</strong> <span>19</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Niveau    :</strong> <span>Deuxième Licence</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email     :</strong> <span>tindameshoullam@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance :</strong> <span>Disponible</span></li>
-                </ul>
-              </div>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="row gy-4 align-items-start">
+          <div class="col-lg-4" data-reveal>
+            <div class="portrait-frame">
+              <img src="assets/img/profil.jpg" alt="Portrait de Meshoulam Tinda" loading="lazy">
             </div>
-            <p class="py-3">
-              Je suis un jeune développeur en formation, passionné par la technologie et motivé par la création de solutions utiles. Actuellement en Science informatique à l'Université Protestante au Congo, je me spécialise progressivement dans le développement web et la science des données. j'aime tranformer les idées en projets concrets, et je construis déjà mon parcours professionnel à travers de réalisations personnelles et des expériences sur terrain. Mon objectif est de devenir un acteur clé de la transformation digitale en RDC et en Afrique.
-            </p>
-              
+          </div>
+          <div class="col-lg-8" data-reveal>
+            <div class="info-panel">
+              <span class="eyebrow">Profil</span>
+              <h2>Meshoulam Tinda</h2>
+              <p class="lead-text">Étudiant en sciences informatiques à l’Université Protestante au Congo, je développe des compétences en création de sites web, PHP, MySQL et bases de la science des données. Mon expérience en cybercafé m’a donné une bonne compréhension des besoins concrets des utilisateurs: documents, assistance, recherche d’information et services numériques de proximité.</p>
+              <p>Mon objectif est de progresser avec des projets utiles, bien documentés et adaptés au contexte local. Je privilégie les solutions simples à maintenir plutôt que les effets visuels inutiles.</p>
+              <ul class="profile-list">
+                <li><i class="bi bi-geo-alt"></i><span><strong>Localisation:</strong> Kinshasa, République démocratique du Congo.</span></li>
+                <li><i class="bi bi-envelope"></i><span><strong>Email:</strong> <a href="mailto:tindameshoullam@gmail.com">tindameshoullam@gmail.com</a></span></li>
+                <li><i class="bi bi-phone"></i><span><strong>Téléphone:</strong> <a href="tel:+243837903056">+243 83 79 03 056</a></span></li>
+                <li><i class="bi bi-briefcase"></i><span><strong>Disponibilité:</strong> collaborations étudiantes, projets web simples et missions freelance adaptées.</span></li>
+              </ul>
+            </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Compétences</h2>
-        <p>Voici un aperçu de mes compétences techniques :</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">35%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>WordPress/CMS</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>MySQL</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
+    <section class="section">
+      <div class="container">
+        <div class="section-title centered" data-reveal>
+          <span class="eyebrow">Compétences</span>
+          <h2>Des compétences présentées par domaine.</h2>
+          <p>Cette présentation remplace les barres de pourcentage peu vérifiables par une lecture plus professionnelle.</p>
         </div>
-
+        <div class="row gy-4">
+          <div class="col-md-6 col-lg-3" data-reveal>
+            <div class="skill-card">
+              <h3>Interface web</h3>
+              <ul class="tag-list"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-reveal>
+            <div class="skill-card">
+              <h3>Serveur</h3>
+              <ul class="tag-list"><li>PHP</li><li>Formulaires</li><li>Validation</li><li>Mail serveur</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-reveal>
+            <div class="skill-card">
+              <h3>Données</h3>
+              <ul class="tag-list"><li>MySQL</li><li>Python</li><li>Saisie</li><li>Organisation</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-reveal>
+            <div class="skill-card">
+              <h3>Travail</h3>
+              <ul class="tag-list"><li>Écoute</li><li>Documentation</li><li>Correction</li><li>Support</li></ul>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-    </section><!-- /Skills Section -->
-
+    <section class="cta-band">
+      <div class="container">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-4">
+          <div>
+            <h2 class="mb-2">Besoin d’un profil web sérieux ?</h2>
+            <p>Je peux vous aider à clarifier une idée de site, corriger une page existante ou mettre en place un formulaire.</p>
+          </div>
+          <a class="btn btn-primary" href="contact.html"><i class="bi bi-send"></i> Discuter du besoin</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Meshoulam</strong> <span>Tous droits réservés<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/meshoullamadnit?t=sNea3vagKjP_wBc1KUH82A&s=09" target="_blank" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/meshoullam.tinda.3" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/mt_tynda?igsh=M2ozdTZqanhoaXkz" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/mt-tynda-39b781343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p class="mb-0">© <span data-current-year></span> <strong class="sitename">Meshoulam Tinda</strong>. Tous droits réservés.</p>
+      <div class="social-links">
+        <a href="https://x.com/meshoullamadnit?t=sNea3vagKjP_wBc1KUH82A&s=09" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil X"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/meshoullam.tinda.3" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/mt_tynda?igsh=M2ozdTZqanhoaXkz" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/mt-tynda-39b781343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Retour en haut"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

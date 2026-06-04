@@ -1,193 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - Meshoulam</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Meshoulam Tinda</title>
+  <meta name="description" content="Contactez Meshoulam Tinda pour un projet web, une amélioration de site, un formulaire de contact ou un accompagnement numérique à Kinshasa.">
+  <meta property="og:title" content="Contact - Meshoulam Tinda">
+  <meta property="og:description" content="Formulaire de contact direct avec validation et réponse par email.">
+  <meta property="og:type" content="website">
 
-  <!-- Favicons -->
   <link href="assets/img/mont.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="contact-page">
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Meshoulam</h1>
+  <header id="header" class="header sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center" aria-label="Accueil Meshoulam Tinda">
+        <span class="logo-mark">MT</span>
+        <span><strong>Meshoulam Tinda</strong><small>Développeur web</small></span>
       </a>
 
-     <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="about.html">A propos</a></li>
-          <li><a href="resume.html">CV</a></li>
+      <nav id="navmenu" class="navmenu" aria-label="Navigation principale">
+        <ul id="navmenu-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="resume.html">Parcours</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="portfolio.html">Projets</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <button class="mobile-nav-toggle d-xl-none" type="button" aria-label="Ouvrir le menu" aria-controls="navmenu-list" aria-expanded="false">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
       </nav>
 
-      <div class="header-social-links">
-        <a href="https://x.com/meshoullamadnit?t=sNea3vagKjP_wBc1KUH82A&s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/meshoullam.tinda.3" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/mt_tynda?igsh=M2ozdTZqanhoaXkz" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/mt-tynda-39b781343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-social-links" aria-label="Réseaux sociaux">
+        <a href="https://x.com/meshoullamadnit?t=sNea3vagKjP_wBc1KUH82A&s=09" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil X"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/meshoullam.tinda.3" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/mt_tynda?igsh=M2ozdTZqanhoaXkz" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/mt-tynda-39b781343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
-
     </div>
   </header>
 
-  <main class="main">
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Écrivez-moi directement depuis le portfolio.</h1>
+        <p>Votre message sera envoyé à mon adresse email. Grâce au champ Reply-To, je pourrai répondre directement depuis ma boîte mail.</p>
+      </div>
+    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>N'hesitez pas à me contacter pour toute collaboration ou projet</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+    <section class="section section-soft">
+      <div class="container">
         <div class="row gy-4">
+          <div class="col-lg-5" data-reveal>
+            <aside class="contact-panel">
+              <span class="eyebrow">Coordonnées</span>
+              <h2 class="mb-3">Discutons de votre besoin.</h2>
+              <p class="lead-text">Décrivez votre projet, votre délai et ce que vous avez déjà comme contenu. Je répondrai avec les prochaines étapes.</p>
 
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div class="contact-method">
+                <i class="bi bi-envelope"></i>
                 <div>
-                  <h3>Adresse</h3>
-                  <p>C/Kinshasa, Av Croix-Rouge n°124/B</p>
+                  <h3>Email</h3>
+                  <p><a href="mailto:tindameshoullam@gmail.com">tindameshoullam@gmail.com</a></p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
+              <div class="contact-method">
+                <i class="bi bi-telephone"></i>
                 <div>
-                  <h3>Appelez-moi</h3>
-                  <p>+243 83 79 03 056</p>
+                  <h3>Téléphone</h3>
+                  <p><a href="tel:+243837903056">+243 83 79 03 056</a></p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
+              <div class="contact-method">
+                <i class="bi bi-geo-alt"></i>
                 <div>
-                  <h3>Email Us</h3>
-                  <p>tindameshoullam@gmail.com</p>
+                  <h3>Localisation</h3>
+                  <p>Kinshasa, République démocratique du Congo</p>
                 </div>
-              </div><!-- End Info Item -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.4127187289787!2d15.294811773283229!3d-4.33334914654516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3144ef1c4693%3A0x2c77c8a796cb17b5!2sUniversit%C3%A9%20Protestante%20au%20Congo!5e0!3m2!1sfr!2scd!4v1759165894000!5m2!1sfr!2scd" width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+              </div>
+
+              <div class="contact-method">
+                <i class="bi bi-clock"></i>
+                <div>
+                  <h3>Réponse</h3>
+                  <p>Réponse par email selon disponibilité.</p>
+                </div>
+              </div>
+            </aside>
           </div>
 
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-7" data-reveal>
+            <form action="forms/contact.php" method="post" class="contact-form" data-contact-form novalidate>
+              <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+
+              <div class="honeypot" aria-hidden="true">
+                <label for="website-field">Site web</label>
+                <input type="text" id="website-field" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
               <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="name-field">Nom du visiteur</label>
+                  <input type="text" name="name" id="name-field" class="form-control" autocomplete="name" minlength="2" maxlength="80" required>
+                </div>
 
                 <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Noms</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                  <label for="email-field">Email du visiteur</label>
+                  <input type="email" name="email" id="email-field" class="form-control" autocomplete="email" maxlength="120" required>
                 </div>
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                <div class="col-12">
+                  <label for="subject-field">Sujet du message</label>
+                  <input type="text" name="subject" id="subject-field" class="form-control" maxlength="120" required>
                 </div>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Objet</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                <div class="col-12">
+                  <label for="message-field">Message</label>
+                  <textarea name="message" id="message-field" class="form-control" minlength="12" maxlength="3000" required></textarea>
                 </div>
 
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center gap-3">
+                  <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Envoyer le message</button>
+                  <p class="form-hint">Aucune clé API n’est exposée côté client. L’envoi est traité côté serveur par PHP.</p>
                 </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Chargement</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Votre message a été envoyé. Merci!</div>
-
-                  <button type="submit">Envoyer le message</button>
-                </div>
-
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Contact Section -->
-
+    </section>
   </main>
 
-  <footer id="footer" class="footer light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Meshoulam</strong> <span>Tous droits reservés<br></span></p>
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p class="mb-0">© <span data-current-year></span> <strong class="sitename">Meshoulam Tinda</strong>. Tous droits réservés.</p>
+      <div class="social-links">
+        <a href="https://x.com/meshoullamadnit?t=sNea3vagKjP_wBc1KUH82A&s=09" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil X"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/meshoullam.tinda.3" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/mt_tynda?igsh=M2ozdTZqanhoaXkz" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/mt-tynda-39b781343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/meshoullamadnit?t=sNea3vagKjP_wBc1KUH82A&s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/meshoullam.tinda.3" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/mt_tynda?igsh=M2ozdTZqanhoaXkz" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/mt-tynda-39b781343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
-      
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Retour en haut"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

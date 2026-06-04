@@ -1,179 +1,168 @@
-
-(function() {
+(function () {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
+  document.documentElement.classList.add("js");
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+  const body = document.body;
+  const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+  const navLinks = document.querySelectorAll("#navmenu a");
+  const scrollTop = document.querySelector(".scroll-top");
 
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+  function closeMobileNav() {
+    body.classList.remove("mobile-nav-active");
+    if (mobileNavToggle) {
+      mobileNavToggle.setAttribute("aria-expanded", "false");
+      const icon = mobileNavToggle.querySelector("i");
+      if (icon) {
+        icon.classList.add("bi-list");
+        icon.classList.remove("bi-x");
       }
-    });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
-
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
-    });
-  });
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
+  if (mobileNavToggle) {
+    mobileNavToggle.addEventListener("click", () => {
+      const isOpen = body.classList.toggle("mobile-nav-active");
+      mobileNavToggle.setAttribute("aria-expanded", String(isOpen));
+      const icon = mobileNavToggle.querySelector("i");
+      if (icon) {
+        icon.classList.toggle("bi-list", !isOpen);
+        icon.classList.toggle("bi-x", isOpen);
       }
     });
   }
 
-  window.addEventListener("load", initSwiper);
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeMobileNav);
   });
 
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && body.classList.contains("mobile-nav-active")) {
+      closeMobileNav();
+    }
+  });
 
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
+  function toggleScrollTop() {
+    if (!scrollTop) return;
+    window.scrollY > 320 ? scrollTop.classList.add("active") : scrollTop.classList.remove("active");
+  }
+
+  if (scrollTop) {
+    scrollTop.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    window.addEventListener("load", toggleScrollTop);
+    document.addEventListener("scroll", toggleScrollTop, { passive: true });
+  }
+
+  const year = document.querySelector("[data-current-year]");
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  const revealItems = document.querySelectorAll("[data-reveal]");
+  if ("IntersectionObserver" in window && revealItems.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }
+
+  function setStatus(form, type, message) {
+    const status = form.querySelector("[data-form-status]");
+    if (!status) return;
+    status.textContent = message;
+    status.classList.remove("is-error", "is-success");
+    status.classList.add("is-visible", type === "success" ? "is-success" : "is-error");
+  }
+
+  function clearStatus(form) {
+    const status = form.querySelector("[data-form-status]");
+    if (!status) return;
+    status.textContent = "";
+    status.classList.remove("is-visible", "is-error", "is-success");
+  }
+
+  function validateForm(form) {
+    let isValid = true;
+    const fields = form.querySelectorAll("[required]");
+
+    fields.forEach((field) => {
+      field.classList.remove("is-invalid");
+      const value = field.value.trim();
+      const minLength = Number(field.getAttribute("minlength") || 1);
+
+      if (!value || value.length < minLength) {
+        field.classList.add("is-invalid");
+        isValid = false;
+      }
+
+      if (field.type === "email" && value && !field.checkValidity()) {
+        field.classList.add("is-invalid");
+        isValid = false;
+      }
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
+    return isValid;
+  }
+
+  document.querySelectorAll("[data-contact-form]").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      clearStatus(form);
+
+      if (!validateForm(form)) {
+        setStatus(form, "error", "Merci de remplir correctement tous les champs requis.");
+        return;
+      }
+
+      const submitButton = form.querySelector("button[type='submit']");
+      const originalText = submitButton ? submitButton.innerHTML : "";
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<i class="bi bi-arrow-repeat"></i> Envoi en cours';
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { "X-Requested-With": "XMLHttpRequest" }
         });
-        if (typeof aosInit === 'function') {
-          aosInit();
+
+        const text = await response.text();
+        let payload = {};
+        try {
+          payload = JSON.parse(text);
+        } catch (error) {
+          payload = { ok: response.ok, message: text };
         }
-      }, false);
+
+        if (!response.ok || !payload.ok) {
+          throw new Error(payload.message || "Le message n'a pas pu être envoyé.");
+        }
+
+        setStatus(form, "success", payload.message || "Votre message a été envoyé. Vous recevrez une réponse par email.");
+        form.reset();
+      } catch (error) {
+        setStatus(form, "error", error.message || "Une erreur est survenue pendant l'envoi.");
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalText;
+        }
+      }
     });
-
   });
-
 })();
